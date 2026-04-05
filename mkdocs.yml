@@ -1,0 +1,38 @@
+site_name: My Docs
+site_url: https://kris-ro.github.io
+
+theme:
+  name: material
+  palette:
+    scheme: default
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.expand
+    - navigation.tabs.sticky
+    - navigation.indexes
+
+nav:
+  - Home: index.md
+  - PhpConfig:
+      - Usage: php-config/config.md
+  - PhpDependencyInjectionContainer:
+      - Usage: php-dependency-injection/container.md
+  - PhpValidator:
+      - Usage: php-validator/validator.md
+  - PhpDatabaseModel:
+      - Usage: php-database-model/model.md
+
+markdown_extensions:
+  - attr_list
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
